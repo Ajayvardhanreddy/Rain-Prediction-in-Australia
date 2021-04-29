@@ -1,0 +1,423 @@
+<!--Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html lang="eng">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+	<title>Rain Prediction in Australia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<meta name="keywords" content="Rain in Australia, Data science Project, Machine Learning Project"/>
+	<link rel="stylesheet" href="../static/css/index.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/css/social-media.css">
+	<link href="http://fonts.googleapis.com/css?family=Bellefair&amp;subset=hebrew,latin-ext" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+          }
+         .dropdown{
+          width:100%;
+          border:#e6ebff;
+          font-family:verdana;
+          color: rgb(124, 112, 112);
+        }
+
+         @media only screen and (min-width: 400px) and (max-width: 500px) {
+             h1{
+                 font-size: 30px;
+                 margin-bottom:30px;
+                 margin-top:25px;
+              }
+          }
+       @media only screen and (min-width: 340px) and (max-width: 400px) {
+            h1{
+                 font-size: 25px;
+                 margin-bottom:30px;
+                 margin-top:25px;
+             }
+        }
+         @media only screen and (min-width: 500px) and (max-width: 600px) {
+            h1{
+                 font-size: 35px;
+                 margin-bottom:30px;
+                 margin-top:25px;
+             }
+        }
+
+
+        .text-footer{
+         margin-top:10px;
+         background:white;
+         border: 1px solid white;
+         font-family: 'Architects Daughter', cursive;
+         color: #2b2e4a;
+         font-size:20px;
+        }
+
+        .text-footer-corona{
+            margin-top:20px;
+            background:white;
+            padding-top:10px;
+            padding-bottom:10px;
+            border: 1px solid white;
+            font-family: 'Architects Daughter', cursive;
+            color: #1DA1F2;
+            font-size:40px;
+        }
+        @media only screen and (min-width: 340px) and (max-width: 400px) {
+             .text-footer-corona{
+                font-size:20px;
+             }
+        }
+         @media only screen and (min-width: 400px) and (max-width: 500px){
+            .text-footer-corona{
+                font-size:30px;
+             }
+         }
+         .head-line{
+             margin-bottom:30px;
+             color: white;
+             text-align:center;
+             font-size:25px;
+             font-family:verdana;
+         }
+         @media only screen and (min-width: 340px) and (max-width: 400px) {
+            .head-line{
+                margin-top:10px;
+                padding: 3.5vw;
+                font-size:15px;
+                text-align:left;
+            }
+         }
+         @media only screen and (min-width: 400px) and (max-width: 500px) {
+            .head-line{
+                padding: 3.5vw;
+                font-size:18px;
+                text-align:left;
+                margin-top:5px;
+            }
+         }
+    </style>
+</head>
+<body>
+	<!--header-->
+	<h1>
+		<span>R</span>ain
+		<span>P</span>rediction
+		<span>i</span>n
+    <span>A</span>ustralia</h1>
+	<!--//header-->
+    <div class="head-line">
+        <h2>Predict whether it rains tomorrow or not in Australia</h2>
+    </div>
+	<!-- content -->
+	<div class="main-content-agile">
+		<div class="sub-main-w3">
+			<form action="/" method="POST">
+                <div class="form-style-agile">
+					<label>Date</label>
+					<div class="pom-agile">
+						<input  class=" dropdown" placeholder="Date" name="date" type="date" required="">
+					</div>
+				</div>
+
+            <div class="form-style-agile">
+                <label>Location</label>
+                <div class="pom-agile">
+                    <select class="dropdown"  name="loc" aria-label="Location">
+                          <option  selected >Select Location</option>
+                          <option value=0>Albury</option>
+                          <option value=1>BadgerysCreek</option>
+                          <option value=2>Cobar</option>
+                          <option value=3>CoffsHarbour</option>
+                          <option value=4>Moree</option>
+                          <option value=5>Newcastle</option>
+                          <option value=6>NorahHead</option>
+                          <option value=7>NorfolkIsland</option>
+                          <option value=8>Penrith</option>
+                          <option value=9>Richmond</option>
+                          <option value=10>Sydney</option>
+                          <option value=11>SydneyAirport</option>
+                          <option value=12>WaggaWagga</option>
+                          <option value=13>Williamtown</option>
+                          <option value=14>Wollongong</option>
+                          <option value=15>Canberra</option>
+                          <option value=16>Tuggeranong</option>
+                          <option value=17>MountGinini</option>
+                          <option value=18>Ballarat</option>
+                          <option value=19>Bendigo</option>
+                          <option value=20>Sale</option>
+                          <option value=21>MelbourneAirport</option>
+                          <option value=22>Melbourne</option>
+                          <option value=23>Mildura</option>
+                          <option value=24>Nhil</option>
+                          <option value=25>Portland</option>
+                          <option value=26>Watsonia</option>
+                          <option value=27>Dartmoor</option>
+                          <option value=28>Brisbane</option>
+                          <option value=29>Cairns</option>
+                          <option value=30>GoldCoast</option>
+                          <option value=31>Townsville</option>
+                          <option value=32>Adelaide</option>
+                          <option value=33>MountGambier</option>
+                          <option value=34>Nuriootpa</option>
+                          <option value=35>Woomera</option>
+                          <option value=36>Albany</option>
+                          <option value=37>Witchcliffe</option>
+                          <option value=38>PearceRAAF</option>
+                          <option value=39>PerthAirport</option>
+                          <option value=40>Perth</option>
+                          <option value=41>SalmonGums</option>
+                          <option value=42>Walpole</option>
+                          <option value=43>Hobart</option>
+                          <option value=44>Launceston</option>
+                          <option value=45>AliceSprings</option>
+                          <option value=46>Darwin</option>
+                          <option value=47>Katherine</option>
+                          <option value=48>Uluru</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-style-agile">
+                <label>Wind Gust Direction</label>
+                    <div class="pom-agile">
+                        <select class="dropdown" name="windgustdir" aria-label="Location">
+                              <option selected>Select Wind Gust Direction</option>
+                              <option value=0>W</option>
+                              <option value=1>WNW</option>
+                              <option value=2>WSW</option>
+                              <option value=3>NE</option>
+                              <option value=4>NNW</option>
+                              <option value=5>N</option>
+                              <option value=6>NNE</option>
+                              <option value=7>SW</option>
+                              <option value=8>ENE</option>
+                              <option value=9>SSE</option>
+                              <option value=10>S</option>
+                              <option value=11>NW</option>
+                              <option value=12>SE</option>
+                              <option value=13>ESE</option>
+                              <option value=14>E</option>
+                              <option value=15>SSW</option>
+                        </select>
+					</div>
+            </div>
+
+            <div class="form-style-agile">
+                <label>Wind Direction at 9am</label>
+					<div class="pom-agile">
+                        <select class="dropdown" name="winddir9am" aria-label="Location">
+                              <option selected>Select Wind Direction at 9am</option>
+                              <option value=0>W</option>
+                              <option value=1>NNW</option>
+                              <option value=2>SE</option>
+                              <option value=3>ENE</option>
+                              <option value=4>SW</option>
+                              <option value=5>SSE</option>
+                              <option value=6>S</option>
+                              <option value=7>NE</option>
+                              <option value=8>N</option>
+                              <option value=9>SSW</option>
+                              <option value=10>WSW</option>
+                              <option value=11>ESE</option>
+                              <option value=12>E</option>
+                              <option value=13>NW</option>
+                              <option value=14>WNW</option>
+                              <option value=15>NNE</option>
+                        </select>
+					</div>
+            </div>
+
+            <div class="form-style-agile">
+                <label>Wind Direction at 3pm</label>
+					<div class="pom-agile">
+                        <select class="dropdown" id="location" name="winddir3pm" aria-label="Location">
+                              <option selected>Select Wind Direction at 3pm</option>
+                              <option value=0>WNW</option>
+                              <option value=1>WSW</option>
+                              <option value=2>E</option>
+                              <option value=3>NW</option>
+                              <option value=4>W</option>
+                              <option value=5>SSE</option>
+                              <option value=6>ESE</option>
+                              <option value=7>ENE</option>
+                              <option value=8>NNW</option>
+                              <option value=9>SSW</option>
+                              <option value=10>SW</option>
+                              <option value=11>SE</option>
+                              <option value=12>N</option>
+                              <option value=13>S</option>
+                              <option value=14>NNE</option>
+                              <option value=15>NE</option>
+                        </select>
+					</div>
+            </div>
+
+
+            <div class="form-style-agile">
+                <label>Minimum temprature</label>
+					<div class="pom-agile">
+						<input placeholder="Minimum temprature(Ex: 12.194) " name="mintemp" type="text" required="">
+					</div>
+            </div>
+            <div class="form-style-agile">
+                <label>Maximum Temperature</label>
+                    <div class="pom-agile">
+                        <input placeholder="Maximum Temperature(Ex: 23.22)" name="maxtemp" type="text" required="">
+                    </div>
+            </div>
+            <div class="form-style-agile">
+                <label>Rainfall</label>
+                    <div class="pom-agile">
+                        <input placeholder="Rainfall(Ex: 2.360) " name="rainfall" type="text" required="">
+                    </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Evaporation</label>
+                    <div class="pom-agile">
+                        <input placeholder="Evaporation(Ex: 5.46)" name="evaporation" type="text" required="">
+                    </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Sunshine</label>
+                    <div class="pom-agile">
+                            <input placeholder="Sunshine(Ex: 7.61)" name="sunshine" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Wind Gust Speed</label>
+                     <div class="pom-agile">
+                         <input placeholder="Wind Gust Speed(Ex: 40.035)" name="windgustspeed" type="text" required="">
+                     </div>
+            </div>
+            <div class="form-style-agile">
+                  <label>Wind Speed 9am</label>
+                     <div class="pom-agile">
+                         <input placeholder="Wind Speed 9am(Ex: 14.04)" name="windspeed9am" type="text" required="">
+                     </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Wind Speed 3pm</label>
+                    <div class="pom-agile">
+                         <input placeholder="Wind Speed 3pm(Ex: 18.66)" name="windspeed3pm" type="text" required="">
+                    </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Humidity 9am</label>
+                     <div class="pom-agile">
+                         <input placeholder="Humidity 9am(Ex: 68.88)" name="humidity9am" type="text" required="">
+                     </div>
+            </div>
+            <div class="form-style-agile">
+                  <label>Humidity 3pm</label>
+                      <div class="pom-agile">
+                          <input placeholder="Humidity 3pm(Ex: 51.53)" name="humidity3pm" type="text" required="">
+                      </div>
+            </div>
+            <div class="form-style-agile">
+                  <label>Pressure 9am</label>
+                        <div class="pom-agile">
+                            <input placeholder="Pressure 9am(Ex: 1017.64)" name="pressure9am" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                   <label>Pressure 3pm</label>
+                        <div class="pom-agile">
+                            <input placeholder="Pressure 3pm(Ex: 1015.255)" name="pressure3pm" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                   <label>Temperature 9am</label>
+                        <div class="pom-agile">
+                            <input placeholder="Temperature 9am(Ex: 16.99)" name="temp9am" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                  <label>Temperature 3pm</label>
+                        <div class="pom-agile">
+                            <input placeholder="Temperature 3pm(Ex: 21.68)" name="team3pm" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                 <label>Cloud 9am</label>
+                        <div class="pom-agile">
+                            <input placeholder="Cloud 9am(Ex: 4.44)" name="cloud9am" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                  <label>Cloud 3pm</label>
+                        <div class="pom-agile">
+                            <input placeholder="Cloud 3pm(Ex: 4.5)" name="cloud3pm" type="text" required="">
+                        </div>
+            </div>
+            <div class="form-style-agile">
+                   <label>Did it Rain Today?</label>
+                        <div class="pom-agile">
+                            <select class="dropdown" id="raintoday" name="raintoday" aria-label="Rain Today">
+                              <option selected>Did it Rain Today?</option>
+                              <option value= 1>Yes</option>
+                              <option value= 0>No</option>
+                            </select>
+                        </div>
+            </div>
+
+                    <input type="submit" value="Predict">
+			</form>
+		</div>
+	</div>
+
+<!--footer-->
+
+
+
+<!--    <div class="social-buttons" align="center">-->
+<!--        <a href="#"><i class="fab fa-linkedin"></i></a>-->
+<!--        <a href="#"><i class="fab fa-github"></i></a>-->
+<!--        <a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--    </div>-->
+    <div class="container">
+
+        <div class="social-buttons">
+              <div align="center" class="text-footer">
+                <h2>Connect with me!</h2>
+        </div>
+            <br>
+            <a href="https://www.instagram.com/_.reddys_kusulu_r/" target="blank" class="social-margin">
+                <div class="social-icon instagram">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="https://www.linkedin.com/in/ajayvardhanreddy/" class="social-margin" target="blank">
+                <div class="social-icon linkedin">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </div>
+            </a>
+            <a href="https://github.com/Ajayvardhanreddy"  target="blank"  class="social-margin">
+                <div class="social-icon github">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </div>
+            </a>
+            <a href="https://twitter.com/kusulureddys" target="blank" class="social-margin">
+                <div class="social-icon twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div align="center" class="text-footer-corona">
+        <h2>Stay Home, Stay Safe.</h2>
+    </div>
+
+</body>
+</html>
