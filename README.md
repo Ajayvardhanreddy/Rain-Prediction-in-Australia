@@ -1,5 +1,4 @@
-# ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Anonymous+pro&color=FF5959&size=35&width=1250&lines=Predictive+Modelling+%E2%80%93+Rain+Prediction+in+Australia+using+Python)
-<img src="https://editor.analyticsvidhya.com/uploads/35913Untitled%20design.png">
+# Predictive Modeling - Rain Prediction in Australia
 
 ### Problem Statement: 
 Predictive model on Rain Dataset to predict whether or not it will rain tomorrow in Australia
